@@ -170,9 +170,9 @@ echo -e "\ngcp \n" >> pcee_cspm_kpi_report_$(date  +%m_%d_%y).csv
 printf %s ${service_summary} | jq -r '.gcp' | jq -r 'map({service_name,high_severity_issues,medium_severity_issues,low_severity_issues,total_number_of_resources}) | (first | keys_unsorted) as $keys | map([to_entries[] | .value]) as $rows | $keys,$rows[] | @csv' >> pcee_cspm_kpi_report_$(date  +%m_%d_%y).csv
 
 echo -e "\noci \n" >> pcee_cspm_kpi_report_$(date  +%m_%d_%y).csv
-printf %s ${service_summary} | jq -r '.oci' | jq -r 'map({service_name,high_severity_issues,medium_severity_issues,low_severity_issues,total_number_of_resources}) | (first | keys_unsorted) as $keys | map([to_entries[] | .value]) as $rows | $keys,$rows[] | @csv' >> pcee_cspm_kpi_report_$(echo $(date  +%m_%d_%y)).csv
+printf %s ${service_summary} | jq -r '.oci' | jq -r 'map({service_name,high_severity_issues,medium_severity_issues,low_severity_issues,total_number_of_resources}) | (first | keys_unsorted) as $keys | map([to_entries[] | .value]) as $rows | $keys,$rows[] | @csv' >> pcee_cspm_kpi_report_$(date  +%m_%d_%y).csv
 
 echo -e "\nalibaba_cloud \n" >> pcee_cspm_kpi_report_$(date  +%m_%d_%y).csv
-printf %s ${service_summary} | jq -r '.alibaba_cloud' | jq -r 'map({service_name,high_severity_issues,medium_severity_issues,low_severity_issues,total_number_of_resources}) | (first | keys_unsorted) as $keys | map([to_entries[] | .value]) as $rows | $keys,$rows[] | @csv' >> pcee_cspm_kpi_report_$(echo $(date  +%m_%d_%y)).csv
+printf %s ${service_summary} | jq -r '.alibaba_cloud' | jq -r 'map({service_name,high_severity_issues,medium_severity_issues,low_severity_issues,total_number_of_resources}) | (first | keys_unsorted) as $keys | map([to_entries[] | .value]) as $rows | $keys,$rows[] | @csv' >> pcee_cspm_kpi_report_$(date  +%m_%d_%y).csv
 
 echo "report created here: $PWD/pcee_cspm_kpi_report_$(date  +%m_%d_%y).csv" 
