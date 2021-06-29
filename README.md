@@ -1,4 +1,4 @@
-# pcee_lunchbox_pov_api_cspm.sh
+# pcee_lunchbox_pov_api_cspm
 Creates the report needed to pull high level KPIs from the Prisma Cloud Enterprise Edition Console
 
 # Last confirmed working 6.29.2021
