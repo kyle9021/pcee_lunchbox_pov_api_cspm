@@ -2,6 +2,7 @@
 Creates the report needed to pull high level KPIs from the Prisma Cloud Enterprise Edition Console
 
 # Last confirmed working 6.29.2021
+[![CodeFactor](https://www.codefactor.io/repository/github/kyle9021/pcee_lunchbox_pov_api_cspm/badge)](https://www.codefactor.io/repository/github/kyle9021/pcee_lunchbox_pov_api_cspm)
 
 # Assumptions
 
