@@ -13,7 +13,7 @@ Creates the report needed to pull high level KPIs from the Prisma Cloud Enterpri
   
 * If you do decide to keep the keys in this script, then it's critical you:
   
-   * Add it to your `.gitignore` (if using git) file and `chmod 700 container_licenses_and_packages.bash` between steps 3 and 4 so that others can't read, write, or excute it. 
+   * Add it to your `.gitignore` (if using git) file and `chmod 700 lunchbox_report.sh` between steps 3 and 4 so that others can't read, write, or excute it. 
 
 # Instructions
 
