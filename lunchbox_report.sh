@@ -15,7 +15,7 @@
 # Found on https://prisma.pan.dev/api/cloud/api-url
 
 
-pcee_console_api_url="<https://<API_URL_FOUND_ABOVE>>
+pcee_console_api_url="<https://<API_URL_FOUND_ABOVE>"
 
 # Create access keys in the Prisma Cloud Enterprise Edition Console
 # Example of a better way: pcee_console_api_url=$(vault kv get -format=json <secret/path> | jq -r '.<resources>')
