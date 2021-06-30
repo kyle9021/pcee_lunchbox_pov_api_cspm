@@ -124,11 +124,15 @@ pcee_auth_token=$(curl -s --request POST \
                        --data "${pcee_auth_body}" | jq -r '.token')
 
 
-if [[ $(printf %s "${pcee_auth_token}") == null ]]; then
-  echo "auth token not recieved, check to ensure access key and secret key assigned properly; also expiration date of the keys in the pcee console";
-  exit;
+if [ -z "${pcee_auth_token}" ]; then
+	echo
+	echo -e "\033[32mauth token not recieved, recommending you check your variable assignment\033[0m";
+	echo
+	exit;
 else
-  echo "auth token recieved";
+	echo
+	echo "auth token recieved"
+	echo
 fi
 
 # Assigns the Summary results to var
