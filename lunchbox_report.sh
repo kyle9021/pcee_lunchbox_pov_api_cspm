@@ -25,6 +25,13 @@ pcee_secretkey="<SECRET_KEY>"
 
 # No edits needed below this line
 
+error_and_exit() {
+  echo
+  echo "ERROR: ${1}"
+  echo
+  exit 1
+}
+
 # Because why not?
 echo "                                                  "
 echo "                                                  "
