@@ -10,7 +10,7 @@ Creates the report needed to pull high level KPIs from the Prisma Cloud Enterpri
 * You're using an Ubuntu 20.04 VM to run this from
 * You understand how to harden this script for production environments
 
-  * The biggest suggestion here is to not save the script with your secret key and access key in it. A better way to do this might be to have a seperate script which exports those credentials as environmental variables. My goal with this script is to simplify the process for those who are learning to work with the Prisma Cloud Enterprise Edition API. 
+  * The biggest suggestion here is to not save the script with your secret key and access key in it. A better way to do this might be to have a seperate script which exports those credentials as environment variables. My goal with this script is to simplify the process for those who are learning to work with the Prisma Cloud Enterprise Edition API. 
   
 * If you do decide to keep the keys in this script, then it's critical you:
   
