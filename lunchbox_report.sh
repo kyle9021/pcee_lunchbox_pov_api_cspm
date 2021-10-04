@@ -1,29 +1,37 @@
 #!/bin/bash
 # Written By Kyle Butler
+# Edited By John Chavanne
+
+# Most recent tests:
+# Tested on 10.1.2021 on prisma_cloud_enterprise_edition using MacOS Big Sur
 # Tested on 6.29.2021 on prisma_cloud_enterprise_edition using Ubuntu 20.04
 
-# Requires jq to be installed sudo apt-get install jq
+# Requires jq to be installed on the system you are running the script: https://stedolan.github.io/jq/download/ 
 
-# Access key should be created in the Prisma Cloud Console under: Settings > Accesskeys
-# Decision to leave access keys in the script to simplify the workflow
 # Recommendations for hardening are: store variables in a secret manager of choice or export the access_keys/secret_key as env variables in a separate script. 
+# Decision here is to use environment variables to simplify the workflow and mitigate risk of including credentials in the script.
 
-# Place the access key and secret key between "<ACCESS_KEY>", <SECRET_KEY> marks respectively below.
-
-
-# Only variable(s) needing to be assigned by and end-user
-# Found on https://prisma.pan.dev/api/cloud/api-url
-
-
-pcee_console_api_url="<https://<API_URL_FOUND_ABOVE>"
-
-# Create access keys in the Prisma Cloud Enterprise Edition Console
+# Access key should be created in the Prisma Cloud Enterprise Edition Console under: Settings > Accesskeys
 # Example of a better way: pcee_console_api_url=$(vault kv get -format=json <secret/path> | jq -r '.<resources>')
-pcee_accesskey="<ACCESS_KEY>"
-pcee_secretkey="<SECRET_KEY>"
 
+# Before running the script, EXPORT the below variables in your terminal/shell.
+# Replace the "<CONSOLE_API_URL>" by mapping the API URL found on https://prisma.pan.dev/api/cloud/api-url
+# Replace the "<ACCESS_KEY>", "<SECRET_KEY>" marks respectively below.
+
+# export API_URL="<CONSOLE_API_URL>"
+# export ACCESS_KEY="<ACCESS_KEY>"
+# export SECRET_KEY="<SECRET_KEY>"
 
 # No edits needed below this line
+
+##########################
+### SCRIPT BEGINS HERE ###
+##########################
+
+# The environment variables you exported in your shell will be consumed here.
+pcee_console_api_url=$API_URL
+pcee_accesskey=$ACCESS_KEY
+pcee_secretkey=$SECRET_KEY
 
 error_and_exit() {
   echo
