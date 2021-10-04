@@ -7,7 +7,7 @@ Creates the report needed to pull high level KPIs from the Prisma Cloud Enterpri
 # Assumptions
 
 * You're using PRISMA CLOUD ENTERPRISE EDTION
-* You're using an Ubuntu 20.04 VM to run this from
+* You're using an OS that supports Bash, such as Linux or Mac OS to run this from
 * You understand how to harden this script for production environments
 
   * The biggest suggestion here is to not save the script with your secret key and access key in it. A better way to do this might be to have a seperate script which exports those credentials as environment variables. My goal with this script is to simplify the process for those who are learning to work with the Prisma Cloud Enterprise Edition API. 
@@ -18,7 +18,7 @@ Creates the report needed to pull high level KPIs from the Prisma Cloud Enterpri
 
 # Instructions
 
-* Step 1: Install jq `sudo apt-get install jq`
+* Step 1: Install jq: https://stedolan.github.io/jq/download/ 
 * Step 2: `git clone https://github.com/Kyle9021/pcee_lunchbox_pov_api_cspm`
 * Step 3: `cd pcee_lunchbox_pov_api_cspm/`
 * Step 4: `nano lunchbox_report.sh` and fill in the variables with the correct data from your console. 
