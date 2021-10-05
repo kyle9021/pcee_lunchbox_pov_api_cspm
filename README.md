@@ -21,9 +21,11 @@ Creates the report needed to pull high level KPIs from the Prisma Cloud Enterpri
 # Instructions
 
 Step 1:  Install jq: https://stedolan.github.io/jq/download/:
+
          * debian/ubuntu `sudo apt-get install jq`
          * macOS `sudo brew install jq`
          * RHEL `sudo yum install jq`
+         
 Step 2:  `git clone https://github.com/Kyle9021/pcee_lunchbox_pov_api_cspm`  
 Step 3:  `cd pcee_lunchbox_pov_api_cspm/`  
 Step 4:  Export the following variables directly in your terminal/shell by replacing the values between the `"<>"` with the correct data from your console. Enter the below commands in your shell prior to running the script.    
