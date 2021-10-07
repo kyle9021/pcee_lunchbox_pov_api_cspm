@@ -29,11 +29,14 @@ Step 1:  Install jq: https://stedolan.github.io/jq/download/:
 Step 2:  `git clone https://github.com/Kyle9021/pcee_lunchbox_pov_api_cspm`  
 Step 3:  `cd pcee_lunchbox_pov_api_cspm/`  
 Step 4:  Export the following variables directly in your terminal/shell by replacing the values between the `"<>"` with the correct data from your console. Enter the below commands in your shell prior to running the script.    
+
 ```
 export API_URL="<CONSOLE_API_URL>"
 export ACCESS_KEY="<ACCESS_KEY>"
 export SECRET_KEY="<SECRET_KEY>"
 ```
+_note: this will show up in your .bash_history if you have that turned on_
+
 Step 5:  `bash lunchbox_report.sh`  
 Step 6:  `ls` to see your report or go through the GUI to access the directory and open in excel/sheets.  
 
