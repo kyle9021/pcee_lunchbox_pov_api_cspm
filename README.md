@@ -37,8 +37,11 @@ export SECRET_KEY="<SECRET_KEY>"
 ```
 _note: this will show up in your .bash_history if you have that turned on_
 
+
 Step 5:  `bash lunchbox_report.sh`  
 Step 6:  `ls` to see your report or go through the GUI to access the directory and open in excel/sheets.  
+
+_note: this was made for a prisma cloud assessment report, you my need to adjust the time variables in the script (`TIMEUNIT` and `TIMEAMOUNT`)if working with an existing customer. By default will pull the last 1 month worth of data_
 
 # Links to reference
 
