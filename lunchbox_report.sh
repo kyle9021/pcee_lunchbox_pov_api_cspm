@@ -22,6 +22,10 @@
 # export ACCESS_KEY="<ACCESS_KEY>"
 # export SECRET_KEY="<SECRET_KEY>"
 
+# adjust the below variables TIMEUNIT and TIMEAMOUNT as necessary. By default will pull the last 1 month of data
+TIMEUNIT="month"
+TIMEAMOUNT="1"
+
 # No edits needed below this line
 
 ##########################
@@ -152,7 +156,7 @@ fi
 
 # Assigns the Summary results to var
 overall_summary=$(curl --request GET \
-     --url "${pcee_console_api_url}/v2/inventory?timeType=relative&timeAmount=1&timeUnit=month" \
+     --url "${pcee_console_api_url}/v2/inventory?timeType=relative&timeAmount=${TIMEAMOUNT}&timeUnit=${TIMEUNIT}" \
      --header "x-redlock-auth: ${pcee_auth_token}" | jq -r '[{summary: "all_accounts",total_number_of_resources: .summary.totalResources, resources_passing: .summary.passedResources, resources_failing: .summary.failedResources, high_severity_issues: .summary.highSeverityFailedResources, medium_severity_issues: .summary.mediumSeverityFailedResources, low_severity_issues: .summary.lowSeverityFailedResources}]')
 
 
