@@ -15,7 +15,7 @@
 # Example of a better way: pcee_console_api_url=$(vault kv get -format=json <secret/path> | jq -r '.<resources>')
 
 # Before running the script, EXPORT the below variables in your terminal/shell.
-# Replace the "<CONSOLE_API_URL>" by mapping the API URL found on https://prisma.pan.dev/api/cloud/api-url
+# Replace the "<CONSOLE_API_URL>" by mapping the API URL found on https://prisma.pan.dev/api/cloud/api-urls
 # Replace the "<ACCESS_KEY>", "<SECRET_KEY>" marks respectively below.
 
 # export API_URL="<CONSOLE_API_URL>"
