@@ -28,7 +28,9 @@ Step 1:  Install jq: https://stedolan.github.io/jq/download/:
          
 Step 2:  `git clone https://github.com/Kyle9021/pcee_lunchbox_pov_api_cspm`  
 Step 3:  `cd pcee_lunchbox_pov_api_cspm/`  
-Step 4:  Export the following variables directly in your terminal/shell by replacing the values between the `"<>"` with the correct data from your console. Enter the below commands in your shell prior to running the script.    
+Step 4:  Export the following variables directly in your terminal/shell by replacing the values between the `"<>"` with the correct data from your console. Enter the below commands in your shell prior to running the script.   
+   
+NOTE: API URLs can be found here: https://prisma.pan.dev/api/cloud/api-urls & Access Key info is found in the Console under Settings > Access Keys (add new key if needed).
 
 ```
 export API_URL="<CONSOLE_API_URL>"
